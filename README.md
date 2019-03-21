@@ -116,7 +116,7 @@ install just installs git!
     - `git init`
 
 ## Git status
-- This is your best friend! Use this Contantly.
+- This is your best friend! Use this Constantly.
 - What does this do?
     - Give you information about your your repository
     - What branch you're on, what commit you're on (coming into)
@@ -149,7 +149,7 @@ install just installs git!
 - Save stuff (ready to be committed) a "checkpoint"
 - What does this do?
     - Saves your staged (ready to be committed)
-    - Gives it a hash (just a reference so that you )
+    - Gives it a hash (just a reference so that you can go back in time to that commit when you need to.)
 - When to use it?
     - When you're ready to save stuff!
 
