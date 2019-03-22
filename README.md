@@ -241,7 +241,7 @@ install just installs git!
 
 ## git remote add \<name of remote> \<url to remote>
 - What does this do?
-    - This allows us to "connect" our current repo which we've been working on locally to our github.
+    - This allows us to "connect" our current repo, which we've been working on locally, to our github.
 - When to use it?
     - when connecting to a remote repo (or fork will not cover that today.)
 - Let's do something with it!
