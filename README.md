@@ -68,7 +68,7 @@ install just installs git!
     - `git commit -m "<short description of what you did>"`
 - Remote workflow (adding on to the above)
     - github! (and other stuff)
-- Commands we'll learn for dealing with remote repositories (a 'repository' is where code is stored when it's remote.)
+- Commands we'll learn for dealing with remote repositories (what code is called when it's remote.)
     - `git remote add origin`
     - `git push -u origin master`
     - `git fetch`
