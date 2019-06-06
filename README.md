@@ -2,7 +2,7 @@
 
 ## What I'm going to talk about today.
 - What is version control
-- What why do we need it?
+- Why do we need it?
 - Local git workflow
 - Remote repositories
 - Branches, merging them and pull requests
@@ -13,7 +13,7 @@ google's generic dictionary defines it as:
 
 ## That looked like vague Russian! What is actually? Why do we need it?
 - What is it?
-    -  version control is normally a software program that gives tells you exactly what version of your software you are running.
+    -  version control is normally a software program that tells you exactly what version of your software you are running.
 - Do you remember group projects before google docs? where we would send our final report to the group that was named: stupid_project-1.0-FINAL.docx
     - Do you remember when steve and anne (who doesn't do work) would send it back to you with the file names (because they didn't finish their work):
         - stupid_project-1.1-FINAL.docx
@@ -24,16 +24,16 @@ google's generic dictionary defines it as:
     - Version control is a program attempting to solve that problem.
 
 - Why do we need it?
-    - We want to every one to agree on the current version so we won't have to deal with the above problem.
+    - We want everyone to agree on the current version so we won't have to deal with the above problem.
     - As well we don't want to delete our brilliant unicorn code!
     - Another reason why we need it is that it gives us a record of everything that's been written in our software project.
     - As well it allows us to have a "Source of Truth" which is the version we all agree on.
 
 
-## Okay I know what it is... How do we get started doing this? Are we going to use somethign to do this?
+## Okay I know what it is... How do we get started doing this? Are we going to use something to do this?
 - We're going to use a program called GIT
-- This is used by a lot of software languages and programs to do version control, not only python.
-    - Git is just a great way to manage the version of files.
+- Git is used by a lot of software languages and programs to do version control, not only python.
+    - This is just a great way to manage the version of files.
 
     - Honestly most of the large companies would be using GIT nowadays.
 
@@ -41,13 +41,12 @@ google's generic dictionary defines it as:
 - Since you're a unicorn with fortunato you're going to be ramping up your team so we want to ensure that steve and anne don't send you shoddy versions.
 
 
-## Now we kind of know what it does let's get it installed!
+## Now that we kind of know what it does, let's get it installed!
 
 - How to install Git!
-- please refer for windows and mac installation to 
-Atlassians' guide to installing git on windows and mac.
+- For windows and mac installation, please refer to Atlassian's guide:
 https://www.atlassian.com/git/tutorials/install-git
-- Since our servers will be using linux we're going to use it too as our development environment (Your VM)
+- Since our servers will be using linux we're also going to use it as our development environment (Your VM)
 - Installing on (Ubuntu) linux
     - Open a terminal!
     - type in the following commands:
@@ -59,7 +58,7 @@ Note: update updates your packages
 install just installs git!
 
 ## Now I have Git! How does one Git? Is dan a Git? (yes to the last question)
-- Here's how we're going to do tackle the above questions.
+- Here's how we're going to tackle the above questions.
 - Local workflow (useful for working alone!)
     - initialize a "folder" to track
     - talk about what is the staging area.
@@ -78,7 +77,7 @@ install just installs git!
     - `git merge`
 
 ## Local workflow (which means git only on your computer.)
-- here were going to learn the meat of the idea of git.
+- here we're going to learn the meat of the idea of git.
 - what we'll learn
     - some terminology
     - `git init`
@@ -94,10 +93,10 @@ install just installs git!
 - working directory
     - this is where you work!
 - staging area
-    - you can think of this as the "ready to committed area"
-    - another way you can think of this is a "pre save area"
-- commit log.
-    - These are the checkpoints of your saved stuff.
+    - you can think of this as the "ready to commit area"
+    - another way you can think of this is as a "pre save area"
+- commit log
+    - These are the checkpoints of your saved stuff
 
 ## Commands for Local workflow!
 - How to call them.
@@ -108,7 +107,7 @@ install just installs git!
 - think of this as "git initialize"
 - When to use it?
     - When starting a project that you haven't used version control on.
-- What does this do.
+- What does this do?
     - creates a .git folder in your "working directory" and keeps all of the internal tracking data for git.
 - Let's do something with it! 
     - Create a folder (`mkdir ready-to-git`)
@@ -118,43 +117,43 @@ install just installs git!
 ## Git status
 - This is your best friend! Use this Constantly.
 - What does this do?
-    - Give you information about your your repository
+    - Give you information about your repository
     - What branch you're on, what commit you're on (coming into)
 - When to use this?
     - All the time!
-    - Any time you're confused, or your want to see changes, or you're breathing and not thinking.s
+    - Any time you're confused, or your want to see changes, or you're breathing and not thinking.
 - Let's do something with it!
     - Make a file (nano README.md) don't add anything to it.
     - `git status`
         - should show the file that's it.
 ![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_git_status.png)
-## Git add <file-name>
+## Git add \<file-name>
 - Adding stuff to the staging (ready to be committed) area!
 - What does this do?
-    - this adds the changes you've you made to begin to be tracked to the "ready to be committed " staging area.
-    - moves untracked (new files) to the staging area to be tracked!
+    - this adds the changes you've made to begin to be tracked to the "ready to be committed " staging area.
+    - moves untracked (new) files to the staging area to be tracked!
 - When to use it?
-    - When your ready to commit your changes, or you want to track your changes from ther.
-    - When you've create a new file and you want to track the changes from nothing.
+    - When you're ready to commit your changes, or you want to track your changes from the staging area.
+    - When you've created a new file and you want to track the changes from nothing.
 
 - Note,
-    - if you've "git add"[ed] a file, if you make any more changes, those will be in your working directory and not the staging area!
+    - if you've already "git add"[ed] a file, additional changes will be in your working directory and not the staging area!
     - if you want to remove files from the "ready to be committed area" use "git reset"
 
 - Let's do something with it!
     - Add the file into the staging area! (`git add README.md`)
 ![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_git_add.png)
 
-## Git commit -m "<What you did in this chunk stuff>"
+## Git commit -m "\<What you did in this chunk stuff>"
 - Save stuff (ready to be committed) a "checkpoint"
 - What does this do?
-    - Saves your staged (ready to be committed)
+    - Saves your staged (ready to be committed) changes
     - Gives it a hash (just a reference so that you can go back in time to that commit when you need to.)
 - When to use it?
     - When you're ready to save stuff!
 
 - Note:
-    - Good practice is to do one thing per commit. How do you know this? If you use the word and in your commit message.
+    - Good practice is to do one thing per commit. How do you know this? If you use the word "and" in your commit message.
 
 - Let's Do Something with It!
     - `git status`
@@ -205,7 +204,7 @@ install just installs git!
     (Remember to git status often)
 1. Let's see what's up
     - `git status`
-2. Let's add this to the staging (ready to be commited) area
+2. Let's add this to the staging (ready to be commited area)
     - `git add README.md`
 3. Let's commit (save to the log)
     - `git commit -m "Add titles to README"`
@@ -227,7 +226,7 @@ install just installs git!
 - Github, Gitlab, and Bitbucket are all awesome remote providers.
 - Don't host it yourself unless you need to. It's a pain.
 - Sign up for github! as we'll be using this.
-- If you want private repositories, go to bitbucket (that's what I use but there's a lot more awesome ones.)
+- If you want private repositories, go to bitbucket (that's what I use but there are a lot more awesome ones.)
 
 ## Setting up a remote repository with github.
 - Sign in to github (once you've signed up)
@@ -235,14 +234,14 @@ install just installs git!
     - Please make it the same as your banking password and send it to me with your mothers maiden name.
 - Click "Create new Repository"
 - Enter the information as follows: (how_to_create_remote_github_repo.png)
-- Once you have created it gives you instructions. We're going to take a look at the url.
+- Once you have created it, it gives you instructions. We're going to take a look at the url.
     - Mine looks like this: `https://github.com/dgmouris/ready-to-git.git`
     - we're going to use https, because ssh is confusing to start with.
 ![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_create_remote_github_repo.png)
 
-## git remote add <name of remote> <url to remote>
+## git remote add \<name of remote> \<url to remote>
 - What does this do?
-    - This allows us to "connect" our current repo which we've been working locally to our github.
+    - This allows us to "connect" our current repo, which we've been working on locally, to our github.
 - When to use it?
     - when connecting to a remote repo (or fork will not cover that today.)
 - Let's do something with it!
@@ -250,7 +249,7 @@ install just installs git!
     - to see our remotes we can use `git remote -v` this shows
 ![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_git_add_remote_repo.png)
 
-## git push <name of remote>
+## git push \<name of remote>
 - What does this do?
     - Allows us to "upload our changes" to the remote repository.
 - When to use it?
@@ -276,9 +275,9 @@ install just installs git!
 
 ## git pull
 - What does this do?
-    - Git fetch doesn't do all the work you have to move your head forward to the most recent commit!
+    - Git fetch doesn't do all the work. You have to move your head forward to the most recent commit!
 - When to use this?
-    - When you do a git fetch mostly to get your self to the most recent commit
+    - When you do a git fetch to get yourself to the most recent commit
 - Let's do something with it!
     - `git fetch` (because you're downloading your stuff.)
     - `git log` (shows your commits)
@@ -287,27 +286,26 @@ install just installs git!
 
 ## Working with others (and your past self.)
 - Since you'll be deploying and using versions of your code, a good way to add new code to a repository is by making a branch.
-- A branches are good ways to kind of segment your work (feature, hotfix)
-- This is one of the more complex parts of git, so if you have questions please reach out afterwards and it's okay if you don't get it.
+- branches are good ways to kind of segment your work (feature, hotfix)
+- This is one of the more complex parts of git, so if you have questions please reach out afterwards and it's okay if you don't get it yet.
 
-## git branch <branch-name>?
-- you want your master "branch" to always be stable (normally production)
+## git branch \<branch-name>
+- You always want your master "branch" to be stable! (normally production)
 - This is a way to separate old code from new code and then get it back in.
-What does this do?
+- What does this do?
     - this creates a new commit (save) section
-    - you can view all of your branches when 
-When to use this?
-    - When you're doing anything new, a new feature or somethign.
+    - you can view all of your branches when you type -a instead of a branch name
+- When to use this?
+    - When you're doing anything new, like creating a new feature or something.
     - When you're fixing something!
 
-## git checkout <branch name>
-What does this do?
-    - this allows you to go into your new created lane! 
-    - we'll take a look as
-When to use this?
+## git checkout \<branch name>
+- What does this do?
+    - this allows you to go into your newly created lane! 
+- When to use this?
     - When we have to change what section of code we're working on.
 
-Let's do something! (draw on the board.)
+- Let's do something! (draw on the board.)
     - If you look at your remote repository our title sizes are wrong!
     - `git branch`
         - shows our branches
@@ -354,7 +352,7 @@ Let's do something! (draw on the board.)
     - this puts all of the commits that you did in your branch and puts them back into the mainline!
     - you can do this locally by doing `git merge <other branch>` when you're on the branch that you want all the changes merged on.
     - show the diagram!
-    - we're going to do this on Github! so this is exciting!
+    - we're going to do this on Github! This is exciting!
 - When to use this?
     - when you're done with the fix, or feature, and it's done being reviewed (you'll see soon)
 - Let's do it! 
@@ -365,7 +363,7 @@ Let's do something! (draw on the board.)
 - Click on create pull request!
 - Here you can do a lot of cool stuff:
     - like add reviewers
-    - assigning people, so that people can help you our with your code!
+    - assign people, so that people can help you our with your code!
     - Add comments to help people out!
 - press git merge and this will put all of your changes into the master branch!
 ![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_push_a_new_branch.png) 
@@ -394,9 +392,9 @@ Let's do something! (draw on the board.)
     - if you've come into one of these we have a lot of people here that can help you out with it!
 - gitignore.
     - this just adds patterns for files that you don't want tracked.
-    - A good way to not check in files that are sensitive.
+    - A good way to not check-in files that are sensitive.
 - git hooks.
-    - are programs/scripts that are executed on a particular event normally: merge, commit, push.
+    - are programs/scripts that are executed on a particular event, normally: merge, commit, push.
     - they are a great way to ensure that your tests all pass before you make a commit.
 - forks!
     - this is a relatively complex topic that we're not going to cover today.
@@ -406,5 +404,5 @@ Let's do something! (draw on the board.)
     - fast forwarding branches on commits.
 
 ## Thank you!
-We've covered a lot, in the interest of time, please reach out to me afterwards as Andrew has another presentation! to help us with fortunato!
+We've covered a lot! In the interest of time, please reach out to me afterwards as Andrew has another presentation to help us with fortunato!
 
