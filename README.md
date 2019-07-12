@@ -232,12 +232,11 @@ install just installs git!
 - Sign in to github (once you've signed up)
     - Please remember your password.
     - Please make it the same as your banking password and send it to me with your mothers maiden name.
-- Click "Create new Repository"
-- Enter the information as follows: (how_to_create_remote_github_repo.png)
+- Click "Create new Repository" and enter the information as it looks like in the picture.
+![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_create_remote_github_repo.png)
 - Once you have created it, it gives you instructions. We're going to take a look at the url.
     - Mine looks like this: `https://github.com/dgmouris/ready-to-git.git`
     - we're going to use https, because ssh is confusing to start with.
-![alt text](https://github.com/dgmouris/zero_to_git/blob/master/images/how_to_create_remote_github_repo.png)
 
 ## git remote add \<name of remote> \<url to remote>
 - What does this do?
