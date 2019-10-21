@@ -1,6 +1,6 @@
 # Zero to git
 
-## What I'm going to talk about today.
+## What I'm going to talk about in this Tutorial
 - What is version control
 - Why do we need it?
 - Local git workflow
